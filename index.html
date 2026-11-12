@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Автоматизация: боты и парсеры на Python</title>
+<meta name="description" content="Телеграм-боты для заявок и парсеры в таблицу на Python. Данные собираются сами, переписывать руками не надо.">
+<style>
+  :root {
+    --bg: #0c0e11;
+    --panel: #14171c;
+    --line: #242a33;
+    --text: #e6e4e1;
+    --muted: #8b939f;
+    --accent: #8ee3c2;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 17px/1.6 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    padding: 0 20px;
+  }
+  .wrap { max-width: 700px; margin: 0 auto; padding: 56px 0 80px; }
+  .label {
+    font: 13px/1.4 ui-monospace, "Consolas", monospace;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 14px;
+  }
+  h1 {
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    margin: 0 0 18px;
+  }
+  h1 em { font-style: normal; color: var(--accent); }
+  .lead { font-size: 19px; color: #c3c8d0; margin: 0 0 14px; }
+  .sub { color: var(--muted); margin: 0 0 40px; }
+  h2 {
+    font: 13px/1.4 ui-monospace, "Consolas", monospace;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    margin: 48px 0 18px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 0 0 12px;
+  }
+  .card h3 { font-size: 17px; font-weight: 600; margin: 0 0 6px; }
+  .card p { margin: 0; color: #a9b1bb; font-size: 15.5px; }
+  .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .price:last-child { border-bottom: 0; }
+  .price .name { color: #c3c8d0; }
+  .price .cost { white-space: nowrap; color: var(--accent); font: 15px/1.4 ui-monospace, "Consolas", monospace; }
+  .cta {
+    display: block;
+    margin: 44px 0 0;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .cta p { margin: 0 0 16px; color: #c3c8d0; }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #08120f;
+    font-weight: 650;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 8px;
+  }
+  .btn:hover { background: #a5edd3; }
+  .note { font-size: 14px; color: var(--muted); margin: 14px 0 0; }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font: 13px/1.6 ui-monospace, "Consolas", monospace;
+    color: #6d7480;
+  }
+  a { color: var(--accent); }
+  @media (max-width: 520px) {
+    .wrap { padding: 36px 0 60px; }
+    h1 { font-size: 27px; }
+    .lead { font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="label">Автоматизация рутины</p>
+  <h1>Рутинные данные <em>собираются сами</em></h1>
+  <p class="lead">Телеграм-боты и парсеры на Python. Заявки, вакансии, цены — в одном месте, без переписывания руками.</p>
+  <p class="sub">Задача от начала до запуска, обычно 1–2 дня. Один человек, без менеджеров.</p>
+
+  <h2>Что делаю</h2>
+
+  <div class="card">
+    <h3>Бот для заявок</h3>
+    <p>Человек пишет в телеграм, отвечает на три вопроса — заявка сама попадает в таблицу и приходит вам уведомлением. Не надо вечером разгребать переписку и вбивать клиентов в Excel.</p>
+  </div>
+
+  <div class="card">
+    <h3>Парсер в таблицу</h3>
+    <p>Собираю данные с сайтов — вакансии, товары, цены, объявления — и складываю в Google Таблицу или Excel: название, компания, сумма, ссылка. Запускается по кнопке или по расписанию.</p>
+  </div>
+
+  <div class="card">
+    <h3>Автоматизация под задачу</h3>
+    <p>Заявка с сайта → таблица → уведомление в телеграм. Или выгрузка из сервиса, где нет нормального экспорта.</p>
+  </div>
+
+  <h2>Посмотреть вживую</h2>
+
+  <div class="card">
+    <h3><a href="https://t.me/zayavk1bot">@zayavk1bot</a> — бот заявок</h3>
+    <p>Рабочий пример. Напишите /start, ответьте на три вопроса — заявка сохранится в таблицу и придёт владельцу.</p>
+  </div>
+
+  <div class="card">
+    <h3>Парсер вакансий hh.ru</h3>
+    <p>Собирает вакансии по запросу в CSV: название, компания, зарплата, город и прямая ссылка на вакансию. Настройка поиска и региона — одна строка в файле.</p>
+  </div>
+
+  <h2>Сколько стоит</h2>
+
+  <div class="card">
+    <div class="price"><span class="name">Бот для заявок</span><span class="cost">3000 ₽ · 1–2 дня</span></div>
+    <div class="price"><span class="name">Парсер в таблицу</span><span class="cost">3000 ₽ · 1 день</span></div>
+    <div class="price"><span class="name">Автоматизация: сайт → таблица → уведомление</span><span class="cost">4000 ₽ · 2 дня</span></div>
+  </div>
+
+  <p class="note">Сейчас беру первые заказы дешевле — мне нужны отзывы. Цена фиксируется до начала работы, доплат по ходу нет.</p>
+
+  <div class="cta">
+    <p>Напишите задачу своими словами — скажу, сколько это займёт и стоит ли вообще так делать. Если задачу решает готовая программа, так и скажу, денег не возьму.</p>
+    <a class="btn" href="https://t.me/korolvragow">Написать в Telegram</a>
+    <p class="note">Отвечаю в течение дня, обычно быстрее.</p>
+  </div>
+
+  <footer>
+    Россия · 2026<br>
+    @korolvragow
+  </footer>
+
+</div>
+</body>
+</html>
