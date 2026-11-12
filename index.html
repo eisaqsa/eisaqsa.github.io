@@ -83,6 +83,11 @@
   .c-hero { grid-column: span 8; padding: 40px 38px 36px; }
   .c-side { grid-column: span 4; display: flex; flex-direction: column; justify-content: space-between; }
   .c-shot { grid-column: span 6; padding: 0; display: flex; flex-direction: column; }
+  .c-text { grid-column: span 6; display: flex; flex-direction: column; }
+  .c-text .ct-h { font-size: 22px; font-weight: 620; letter-spacing: -0.022em; color: var(--ink); margin: 0 0 10px; }
+  .c-text .ct-p { font-size: 15px; margin: 0 0 18px; }
+  .c-text .link-arrow { margin-top: auto; }
+  .c-shot-wide { grid-column: span 12; padding: 0; display: flex; flex-direction: column; }
   .c-wide { grid-column: span 12; }
 
   h1 {
@@ -136,6 +141,17 @@
   .shot-body img {
     display: block; width: 100%; height: auto; max-height: 400px;
     object-fit: contain; border-radius: 10px;
+  }
+  .shot-body.crop { padding: 0; align-items: stretch; }
+  .shot-body.crop img {
+    height: 360px; max-height: none;
+    object-fit: cover; object-position: left top;
+    border-radius: 0;
+  }
+  .shot-body.wide { padding: 0; align-items: stretch; background: #ecebe6; }
+  .shot-body.wide img {
+    width: 100%; height: auto; max-height: none;
+    object-fit: contain; border-radius: 0;
   }
   .shot-foot {
     display: flex; align-items: center; justify-content: space-between;
@@ -208,9 +224,10 @@
   }
 
   @media (max-width: 900px) {
-    .c-hero, .c-side, .c-shot { grid-column: span 12; }
+    .c-hero, .c-side, .c-shot, .c-text, .c-shot-wide { grid-column: span 12; }
     .c-hero { padding: 30px 24px; }
     .shot-body img { max-height: 320px; }
+    .shot-body.crop img { height: 230px; }
     .grid3 { grid-template-columns: 1fr; }
     .cta-card { grid-template-columns: 1fr; padding: 30px; margin-top: 56px; }
     .cta-card .pill { display: inline-flex; }
@@ -278,17 +295,21 @@
       </div>
     </div>
 
-    <div class="card c-shot">
+    <div class="card c-text">
+      <p class="k">Парсер вакансий</p>
+      <h3 class="ct-h">Данные с сайтов — сразу в таблицу</h3>
+      <p class="ct-p">Настраивается на любой сайт со списками: вакансии, товары, цены, объявления. Собирает название, компанию, сумму, город и прямую ссылку — построчно, как в обычной таблице.</p>
+      <a class="link-arrow" href="https://docs.google.com/spreadsheets/d/1Q9-CWigTm9xrkmHY1tuF2YN9Sv5SOhNzi6oU8EFHzLA/edit?usp=sharing">Открыть таблицу-пример →</a>
+    </div>
+
+    <div class="card c-shot-wide">
       <div class="shot-head">
         <div>
-          <div class="t">Парсер вакансий</div>
-          <div class="d">Данные с сайтов — сразу в таблицу</div>
+          <div class="t">Таблица-пример</div>
+          <div class="d">Вакансии, собранные парсером — так это выглядит</div>
         </div>
       </div>
-      <div class="shot-body"><img src="img/hh-parser.png" alt="Таблица с собранными вакансиями"></div>
-      <div class="shot-foot">
-        <a class="link-arrow" href="https://docs.google.com/spreadsheets/d/1Q9-CWigTm9xrkmHY1tuF2YN9Sv5SOhNzi6oU8EFHzLA/edit?usp=sharing">Открыть таблицу-пример →</a>
-      </div>
+      <div class="shot-body wide"><img src="img/hh-parser.png" alt="Таблица с собранными вакансиями"></div>
     </div>
 
     <div class="card c-wide">
