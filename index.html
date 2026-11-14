@@ -85,7 +85,9 @@
   .c-shot { grid-column: span 6; padding: 0; display: flex; flex-direction: column; }
   .c-text { grid-column: span 6; display: flex; flex-direction: column; }
   .c-text .ct-h { font-size: 22px; font-weight: 620; letter-spacing: -0.022em; color: var(--ink); margin: 0 0 10px; }
-  .c-text .ct-p { font-size: 15px; margin: 0 0 18px; }
+  .c-text .ct-p { font-size: 15px; margin: 0 0 14px; }
+  .c-text .ct-case { font-size: 14px; color: var(--muted); margin: 0 0 18px; }
+  .c-text .ct-case b { color: var(--ink); font-weight: 600; }
   .c-text .link-arrow { margin-top: auto; }
   .c-shot-wide { grid-column: span 12; padding: 0; display: flex; flex-direction: column; }
   .c-wide { grid-column: span 12; }
@@ -204,6 +206,9 @@
     font-size: 26px; font-weight: 640; letter-spacing: -0.03em; color: var(--ink); white-space: nowrap;
   }
   .afterword { margin: 22px 0 0; font-size: 14.5px; color: var(--muted); max-width: 34em; }
+  .afterword b { color: var(--ink); font-weight: 600; }
+  .limits { margin: 10px 0 0; font-size: 14.5px; color: var(--muted); max-width: 37em; }
+  .limits b { color: var(--ink); font-weight: 600; }
 
   .cta-card {
     margin: 76px 0 0;
@@ -298,7 +303,8 @@
     <div class="card c-text">
       <p class="k">Парсер вакансий</p>
       <h3 class="ct-h">Данные с сайтов — сразу в таблицу</h3>
-      <p class="ct-p">Настраивается на любой сайт со списками: вакансии, товары, цены, объявления. Собирает название, компанию, сумму, город и прямую ссылку — построчно, как в обычной таблице.</p>
+      <p class="ct-p">Собираю данные с сайтов, где списки открыты: вакансии, товары, цены, объявления. Перед началом проверяю, получится ли собрать, и говорю честно — без «сделаю с любого сайта». В таблицу попадают название, компания, сумма, город и прямая ссылка. Вместо двадцати вкладок и копирования руками — готовая строка за строкой.</p>
+      <p class="ct-case">Пример: запрос «кибербезопасность AI» по Санкт-Петербургу — <b>18 вакансий за один запуск</b>, две страницы выдачи. У каждой прямой ссылкой на вакансию. Вручную это восемнадцать вкладок и переписывание в таблицу.</p>
       <a class="link-arrow" href="https://docs.google.com/spreadsheets/d/1Q9-CWigTm9xrkmHY1tuF2YN9Sv5SOhNzi6oU8EFHzLA/edit?usp=sharing">Открыть таблицу-пример →</a>
     </div>
 
@@ -306,7 +312,7 @@
       <div class="shot-head">
         <div>
           <div class="t">Таблица-пример</div>
-          <div class="d">Вакансии, собранные парсером — так это выглядит</div>
+          <div class="d">Запрос «кибербезопасность AI», Санкт-Петербург — 18 строк с ссылками</div>
         </div>
       </div>
       <div class="shot-body wide"><img src="img/hh-parser.png" alt="Таблица с собранными вакансиями"></div>
@@ -392,6 +398,35 @@
     </div>
 
     <p class="afterword">Сейчас беру первые заказы дешевле обычного — мне нужны отзывы. Скажите, что за задача, и я назову точную цену.</p>
+    <p class="limits"><b>Что не входит в эту цену:</b> обход капчи и защит от ботов, вход по логину и паролю, круглосуточный мониторинг и поддержка сервера. Такие задачи оцениваются отдельно — скажу цену до начала, а не после.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <span class="sec-name">Условия</span>
+    </div>
+    <h2>Как проходит работа и что остаётся вам</h2>
+    <p class="sub">Договорились на цифру — она не меняется по ходу. Никаких «это оказалось сложнее, доплатите».</p>
+    <div class="grid3">
+      <div class="card">
+        <div class="num-badge">1</div>
+        <h3>Оплата</h3>
+        <p>Половина до начала работы, половина — когда вы проверили и всё работает. Перевод на карту или на счёт, как удобнее.</p>
+      </div>
+      <div class="card">
+        <div class="num-badge">2</div>
+        <h3>Гарантия две недели</h3>
+        <p>Если что-то сломалось по моей вине — исправляю бесплатно, в течение пары дней. Не «когда-нибудь потом».</p>
+      </div>
+      <div class="card">
+        <div class="num-badge">3</div>
+        <h3>Всё остаётся у вас</h3>
+        <p>Код, таблица, бот и доступы — ваши. Показываю, как всё устроено, чтобы вы не зависели от меня.</p>
+      </div>
+    </div>
   </div>
 </section>
 
